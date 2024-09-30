@@ -4,7 +4,7 @@
 :root {
   --main-bg: #f2e0e0;
   --main-white: #ffffff;
-  --main-black: #;
+  --main-black: #000000;
 }
 
 * {
@@ -18,7 +18,7 @@ body {
   background-color: var(--main-bg);
   display: flex;
   flex-direction: column;
-  padding-bottom: 440px;
+  padding-bottom: 800px;
 }
 
 .navbar {
@@ -30,14 +30,8 @@ body {
   list-style-type: none;
   flex-direction: row;
   column-gap: 120px;
-
-  /* horizontal */
   justify-content: center;
-
-  /* vartical */
   align-items: center;
-
-  /* vertical horizontal */
   padding: 32px 40px;
 }
 
@@ -45,22 +39,31 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center; /* Tambahan untuk menyelaraskan konten secara vertikal */
   width: 100%;
-  padding: 0px 120px;
+  padding: 0 120px;
+  min-height: 100vh; /* Agar hero section mencakup tinggi penuh layar */
 }
 
-/* Hero Container Left */
 .container-left {
   display: flex;
-  align-items: end;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-text {
-  font-size: 140px;
+  font-size: 100px; /* Ukuran font dikurangi agar lebih responsif */
+  line-height: 1.2;
   width: 554px;
+  max-width: 100%;
 }
 
-/* Hero Container right */
+.container-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-image {
   width: 488px;
   height: 561px;
